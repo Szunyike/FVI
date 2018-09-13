@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33FC2957-FD6E-42AC-AFDC-E72DF02C63A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FV_VI.My.MyApplication</StartupObject>
+    <RootNamespace>FV_VI</RootNamespace>
+    <AssemblyName>tpl</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>tpl.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>tpl.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bio.WebServices">
+      <HintPath>..\Source\Framework\Bio.WebServices\bin\Debug\Bio.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlastViewer\BlastBasicIO.vb" />
+    <Compile Include="BlastViewer\BlastExport.vb" />
+    <Compile Include="BlastViewer\BlastFilter.vb" />
+    <Compile Include="BlastViewer\BlastViewer.Designer.vb">
+      <DependentUpon>BlastViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlastViewer\BlastViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlastViewer\ConsoleBlast.vb" />
+    <Compile Include="BlastViewer\ContigsFromDifferentAssemblies.vb" />
+    <Compile Include="BlastViewer\Exrended.vb" />
+    <Compile Include="BlastViewer\ExtendedHSP.vb" />
+    <Compile Include="BlastViewer\Genomic.vb" />
+    <Compile Include="BlastViewer\Helper.vb" />
+    <Compile Include="BlastViewer\ImportExport.vb" />
+    <Compile Include="BlastViewer\KeresztComplex.vb" />
+    <Compile Include="BlastViewer\SearchForDoubles.vb" />
+    <Compile Include="BlastViewer\SelectFromList.Designer.vb">
+      <DependentUpon>SelectFromList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlastViewer\SelectFromList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comparers.vb" />
+    <Compile Include="g.designer.vb">
+      <DependentUpon>g.vb</DependentUpon>
+    </Compile>
+    <Compile Include="g.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenBank.vb" />
+    <Compile Include="GffParser.vb" />
+    <Compile Include="IFBackGround.vb" />
+    <Compile Include="InputBox.vb" />
+    <Compile Include="Input\Get_List_of_String.Designer.vb">
+      <DependentUpon>Get_List_of_String.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\Get_List_of_String.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\TextImport.Designer.vb">
+      <DependentUpon>TextImport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\TextImport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IO\IO.vb" />
+    <Compile Include="ListItems.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\ListManager.Designer.vb" />
+    <Compile Include="My Project\ListManager.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\MyConstants.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\SelectFeaturesAndQulifiers.Designer.vb" />
+    <Compile Include="My Project\SelectFeaturesAndQulifiers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\SelectQualifiers.Designer.vb" />
+    <Compile Include="My Project\SelectQualifiers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Select_Columns.Designer.vb" />
+    <Compile Include="My Project\Select_Columns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Sequences.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My Project\Text.vb" />
+    <Compile Include="Input\SelectFirstRowAndColumn%28s%29.Designer.vb">
+      <DependentUpon>SelectFirstRowAndColumn%28s%29.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\SelectFirstRowAndColumn%28s%29.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Database\Affy\AffyProbes.vb" />
+    <Compile Include="Other Database\Biosystem\BioSystem.vb" />
+    <Compile Include="Other Database\CrossRefs\CrossRef.vb" />
+    <Compile Include="Other Database\Kegg\KeggDownloader.vb" />
+    <Compile Include="PhylogeneticXMLRecolouring.vb" />
+    <Compile Include="Sequences.vb" />
+    <Compile Include="Sequence\RemoveDuplicatedSeqBySequence.vb" />
+    <Compile Include="Input\SettingOfTranscriptPromoterUTR.Designer.vb">
+      <DependentUpon>SettingOfTranscriptPromoterUTR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\SettingOfTranscriptPromoterUTR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Text.vb" />
+    <Compile Include="Translate.vb" />
+    <Compile Include="Translatevb.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BlastViewer\BlastViewer.resx">
+      <DependentUpon>BlastViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="g.resx">
+      <DependentUpon>g.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\Get_List_of_String.resx">
+      <DependentUpon>Get_List_of_String.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\TextImport.resx">
+      <DependentUpon>TextImport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\ListManager.resx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\SelectFeaturesAndQulifiers.resx" />
+    <EmbeddedResource Include="My Project\SelectQualifiers.resx" />
+    <EmbeddedResource Include="My Project\Select_Column.resx" />
+    <EmbeddedResource Include="My Project\Select_Columns.resx" />
+    <EmbeddedResource Include="Input\SelectFirstRowAndColumn%28s%29.resx">
+      <DependentUpon>SelectFirstRowAndColumn%28s%29.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\SettingOfTranscriptPromoterUTR.resx">
+      <DependentUpon>SettingOfTranscriptPromoterUTR.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Source\Framework\Bio.Core\Bio.Core.csproj">
+      <Project>{dfb9c4e2-c98c-4401-a650-756abab52663}</Project>
+      <Name>Bio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Bio.Desktop\Bio.Desktop.csproj">
+      <Project>{a482be8f-67d5-4991-84bd-da3bf6ed84fa}</Project>
+      <Name>Bio.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Shims\Bio.Platform.Helpers.Desktop\Bio.Platform.Helpers.Desktop.csproj">
+      <Project>{2a6bb04d-047f-4f04-9afb-9bf8941a292a}</Project>
+      <Name>Bio.Platform.Helpers.Desktop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

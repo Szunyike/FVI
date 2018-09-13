@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63201F15-4526-4169-8098-70CBA588BF4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ClassLibrary1</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ClassLibrary1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ClassLibrary1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.8.0\lib\net46\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net46\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net46\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Statistics.3.8.0\lib\net46\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicInterop, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicInterop.0.8.1\lib\netstandard1.2\DynamicInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="HDF.PInvoke, Version=1.10.2.0, Culture=neutral, PublicKeyToken=18793c1fcffe58a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\HDF.PInvoke.1.10.2.0\lib\HDF.PInvoke.dll</HintPath>
+    </Reference>
+    <Reference Include="HDF5DotNet">
+      <HintPath>..\..\..\..\..\..\..\..\HDF5\HDF\HDF5DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\R.NET.1.7.0\lib\net40\RDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet.NativeLibrary, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\R.NET.1.7.0\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim, Version=2.1.0.0, Culture=neutral, PublicKeyToken=c55ec16d10c4b366, processorArchitecture=MSIL">
+      <HintPath>..\packages\shim.2.1.0-pre\lib\net40\Shim.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AA Properties\AA_Properties.vb" />
+    <Compile Include="Aligments\Aligners.vb" />
+    <Compile Include="Aligments\Common_Mapping.vb" />
+    <Compile Include="BAM\BamStat.vb" />
+    <Compile Include="BAM\Bam_Basic_IO.vb" />
+    <Compile Include="BAM\CIGAR.vb" />
+    <Compile Include="BAM\Convert.vb" />
+    <Compile Include="BAM\Export.vb" />
+    <Compile Include="BAM\Filter_Split.vb" />
+    <Compile Include="BAM\GroupBy.vb" />
+    <Compile Include="BAM\Orientation.vb" />
+    <Compile Include="BAM\SAM_Manipulationvb.vb" />
+    <Compile Include="BAM\Settings.vb" />
+    <Compile Include="BAM\Transcripts.vb" />
+    <Compile Include="BAM\Trim.vb" />
+    <Compile Include="BAM_Manipulation\BAm_Manipulation.vb" />
+    <Compile Include="BAM_Manipulation\Bam_Split.vb" />
+    <Compile Include="BAM_Manipulation\Linux.vb" />
+    <Compile Include="BAM\BAM_Optional_Filed_Manipulation.vb" />
+    <Compile Include="Basic Items\NameAndIDs.vb" />
+    <Compile Include="Basic Items\Percents.vb" />
+    <Compile Include="Blast\BlastBasicIO.vb" />
+    <Compile Include="Blast\BlastExport.vb" />
+    <Compile Include="Blast\BlastFilter.vb" />
+    <Compile Include="Blast\BlastManipulation.vb" />
+    <Compile Include="Blast\ConsoleBlast.vb" />
+    <Compile Include="Blast\ContigsFromDifferentAssemblies.vb" />
+    <Compile Include="Blast\Exrended.vb" />
+    <Compile Include="Blast\ExtendedHSP.vb" />
+    <Compile Include="Blast\Genomic.vb" />
+    <Compile Include="Blast\Helper.vb" />
+    <Compile Include="Blat\Blat.vb" />
+    <Compile Include="Blat\BlatDatabase.vb" />
+    <Compile Include="Blat\BlatImport.vb" />
+    <Compile Include="Class1.vb" />
+    <Compile Include="Coloring\Coloring.vb" />
+    <Compile Include="Console\Porechop.vb" />
+    <Compile Include="Controls\Basic Input\cb.Designer.vb">
+      <DependentUpon>cb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Basic Input\cb.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Basic Input\CheckBox.Designer.vb">
+      <DependentUpon>CheckBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Basic Input\CheckBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Basic Input\Get_Double.Designer.vb">
+      <DependentUpon>Get_Double.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Basic Input\Get_Double.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Basic Input\Get_Integer.Designer.vb">
+      <DependentUpon>Get_Integer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Basic Input\Get_Integer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Basic Input\OK_Cancel.Designer.vb">
+      <DependentUpon>OK_Cancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Basic Input\OK_Cancel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectOrNot.Designer.vb">
+      <DependentUpon>SelectOrNot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectOrNot.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Set_Console_Properties.Designer.vb">
+      <DependentUpon>Set_Console_Properties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Set_Console_Properties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Count_Silent_Conservative_Semi_Radical.vb" />
+    <Compile Include="DisEMBL\DisEMBL.vb" />
+    <Compile Include="DNA\Chimera.vb" />
+    <Compile Include="DNA\PairwaseAlignment.vb" />
+    <Compile Include="DNA\PAS.vb" />
+    <Compile Include="DNA\Transcripts\Analysis.vb" />
+    <Compile Include="DNA\Transcripts\PolyA.vb" />
+    <Compile Include="DNA\Repeat.vb" />
+    <Compile Include="DNA\Translate.vb" />
+    <Compile Include="DNA\Variants.vb" />
+    <Compile Include="Features\Feat_To_String.vb" />
+    <Compile Include="Features\Iterator.vb" />
+    <Compile Include="Features\Locis.vb" />
+    <Compile Include="Gff\GFF.vb" />
+    <Compile Include="HDF5\HDF5.vb" />
+    <Compile Include="IO\XML.vb" />
+    <Compile Include="Locations\BLs_Finding.vb" />
+    <Compile Include="Locations\SItes.vb" />
+    <Compile Include="Locis\Locis.vb" />
+    <Compile Include="Managers\MinIon_Manager.vb" />
+    <Compile Include="Math\Frequencies.vb" />
+    <Compile Include="Math\Number.vb" />
+    <Compile Include="Math\Poisson.vb" />
+    <Compile Include="Meme\Meme.vb" />
+    <Compile Include="MinIon\Common.vb" />
+    <Compile Include="DNA\Transcripts\Orientation\Orientation.vb" />
+    <Compile Include="Outer Programs\BedTools.vb" />
+    <Compile Include="Outer Programs\DisEMBL.vb" />
+    <Compile Include="Outer Programs\GATK\GATK.vb" />
+    <Compile Include="Outer Programs\Meme.vb" />
+    <Compile Include="Outer Programs\Primer3.vb" />
+    <Compile Include="Outer Programs\R\Venn.vb" />
+    <Compile Include="Outer Programs\SamTools.vb" />
+    <Compile Include="Outer Programs\SavitzkyGolay.vb" />
+    <Compile Include="Outer Programs\Settings_For_Console.vb" />
+    <Compile Include="PacBio\Common.vb" />
+    <Compile Include="PacBio\HDF5.vb" />
+    <Compile Include="PacBio\Inrons.vb" />
+    <Compile Include="PacBio\Mapping.vb" />
+    <Compile Include="PacBio\Pacbio_Count.vb" />
+    <Compile Include="PacBio\Pacbio_HDF5.vb" />
+    <Compile Include="PacBio\Pacbio_Transcript_Discovery_Settings.vb" />
+    <Compile Include="PacBio\TR_NetWork.vb" />
+    <Compile Include="Protein\AGGRESCAN.vb" />
+    <Compile Include="Protein\Aliphatic Index.vb" />
+    <Compile Include="Protein\Extinction_Coefficient .vb" />
+    <Compile Include="Protein\GloboPlot.vb" />
+    <Compile Include="Protein\Hidrophobicity.vb" />
+    <Compile Include="Protein\Instability.vb" />
+    <Compile Include="Math\Combinatory.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Comparers.vb" />
+    <Compile Include="Constants\MyConstants.vb" />
+    <Compile Include="Constants\Settings.Designer.vb">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controls\ControlHelper.vb" />
+    <Compile Include="Controls\ListManager.Designer.vb">
+      <DependentUpon>ListManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListManager.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PhyloGeneticClorPicker.Designer.vb">
+      <DependentUpon>PhyloGeneticClorPicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PhyloGeneticClorPicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Select_Columns.Designer.vb">
+      <DependentUpon>Select_Columns.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Select_Columns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SetSearch.Designer.vb">
+      <DependentUpon>SetSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SetSearch.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Excel\Excel.vb" />
+    <Compile Include="Features\ExtFeatureManipulation.vb" />
+    <Compile Include="Features\FeatureAndLocations.vb" />
+    <Compile Include="Features\Features.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Features\MergeFeatureAnnotations.vb" />
+    <Compile Include="Features\ReName.vb" />
+    <Compile Include="Filter\Numerical_Filter.vb" />
+    <Compile Include="Math\MathCalc.vb" />
+    <Compile Include="Protein\Amino_Acid_Composition.vb" />
+    <Compile Include="Protein\Protein_Stability.vb" />
+    <Compile Include="Protein\TMHMM_Manipulation.vb" />
+    <Compile Include="Protein\TopScon.vb" />
+    <Compile Include="RNASeq\Trintiy\Trinity.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RNASeq\Trintiy\TrinitySettings.vb" />
+    <Compile Include="SequenceManipulation\GetSequences.vb" />
+    <Compile Include="SequenceManipulation\Properties.vb" />
+    <Compile Include="SequenceManipulation\Repair.vb" />
+    <Compile Include="Sequence\GffParser.vb" />
+    <Compile Include="InputBox.vb" />
+    <Compile Include="IO\Export.vb" />
+    <Compile Include="IO\Files.vb" />
+    <Compile Include="IO\Import.vb" />
+    <Compile Include="IO\IO.vb" />
+    <Compile Include="Locations\LocationManipulation.vb" />
+    <Compile Include="Protein\MW.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Other Database\Affy\AffyProbes.vb" />
+    <Compile Include="Other Database\Annotation\AnnotationBuilderOpener.vb" />
+    <Compile Include="Other Database\Biosystem\BioSystem.vb" />
+    <Compile Include="Other Database\CrossRefs\CrossRef.vb" />
+    <Compile Include="Other Database\Kegg\KeggDownloader.vb" />
+    <Compile Include="Other Database\SignalP\SignalP.vb" />
+    <Compile Include="PhylogeneticXMLRecolouring.vb" />
+    <Compile Include="Primers\Primer3.vb" />
+    <Compile Include="Protein\ProteinMotif.vb" />
+    <Compile Include="SeqGroup\SeqGroup.vb" />
+    <Compile Include="Sequences.vb" />
+    <Compile Include="Sequence\Sequence_Ranges.vb" />
+    <Compile Include="Sequence\Variants\Variant.vb" />
+    <Compile Include="Stat\Distribution.vb" />
+    <Compile Include="Szunyi\Helper.vb" />
+    <Compile Include="Szunyi\RNASeq\Count\BlsWithFeatures_Manipulation.vb" />
+    <Compile Include="Szunyi\Text\GetCount.vb" />
+    <Compile Include="Szunyi\Text\Lists.vb" />
+    <Compile Include="Text\Regexp.vb" />
+    <Compile Include="Text\Table_Manipulation_Setting.vb" />
+    <Compile Include="Text\Text.vb" />
+    <Compile Include="Text\TextManipulation.vb" />
+    <Compile Include="Text\UniqueDistinct.vb" />
+    <Compile Include="Protein\Translate.vb" />
+    <Compile Include="SequenceManipulation\UniqueDistinct.vb" />
+    <Compile Include="Upload\EGA_Upload.vb" />
+    <Compile Include="Util_Helpers.vb" />
+    <Compile Include="VCFs SNPs\VCF.vb" />
+    <Compile Include="Venn\Venn_Table.vb" />
+    <Compile Include="Weight Matrixes\Weiht_Matrix.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Basic Input\cb.resx">
+      <DependentUpon>cb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Basic Input\CheckBox.resx">
+      <DependentUpon>CheckBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Basic Input\Get_Double.resx">
+      <DependentUpon>Get_Double.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Basic Input\Get_Integer.resx">
+      <DependentUpon>Get_Integer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ListManager.resx">
+      <DependentUpon>ListManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Basic Input\OK_Cancel.resx">
+      <DependentUpon>OK_Cancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PhyloGeneticClorPicker.resx">
+      <DependentUpon>PhyloGeneticClorPicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SelectOrNot.resx">
+      <DependentUpon>SelectOrNot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Select_Columns.resx">
+      <DependentUpon>Select_Columns.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SetSearch.resx">
+      <DependentUpon>SetSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Set_Console_Properties.resx">
+      <DependentUpon>Set_Console_Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Constants\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Source\Framework\Bio.Core\Bio.Core.csproj">
+      <Project>{dfb9c4e2-c98c-4401-a650-756abab52663}</Project>
+      <Name>Bio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Bio.Desktop\Bio.Desktop.csproj">
+      <Project>{a482be8f-67d5-4991-84bd-da3bf6ed84fa}</Project>
+      <Name>Bio.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Bio.WebServices\Bio.WebServices.csproj">
+      <Project>{3b79b074-0df5-4fb5-89b7-6a8f4271a1a7}</Project>
+      <Name>Bio.WebServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Shims\Bio.Platform.Helpers.Desktop\Bio.Platform.Helpers.Desktop.csproj">
+      <Project>{2a6bb04d-047f-4f04-9afb-9bf8941a292a}</Project>
+      <Name>Bio.Platform.Helpers.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Shims\Bio.Platform.Helpers\Bio.Platform.Helpers.csproj">
+      <Project>{83cbb611-4049-456a-b87b-0b2cfc4797fa}</Project>
+      <Name>Bio.Platform.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Methylation\" />
+    <Folder Include="Other Database\AtacSeq\" />
+    <Folder Include="Settings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\szip.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zlib.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

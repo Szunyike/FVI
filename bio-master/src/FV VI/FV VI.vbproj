@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33FC2957-FD6E-42AC-AFDC-E72DF02C63A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Szunyi_All.Form1</StartupObject>
+    <RootNamespace>Szunyi_All</RootNamespace>
+    <AssemblyName>Szunyi All</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>I:\FTP2\OwnSoftwares\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>82</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Szunyi All.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Szunyi All.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CD949505F9F947FF49D35BBFC84875360C45A805</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FV VI_3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicInterop, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicInterop.0.8.1\lib\netstandard1.2\DynamicInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="HDF.PInvoke, Version=1.10.2.0, Culture=neutral, PublicKeyToken=18793c1fcffe58a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\HDF.PInvoke.1.10.2.0\lib\HDF.PInvoke.dll</HintPath>
+    </Reference>
+    <Reference Include="HDF5DotNet">
+      <HintPath>..\..\..\..\..\..\..\..\HDF5\HDF\HDF5DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\R.NET.1.7.0\lib\net40\RDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet.NativeLibrary, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\R.NET.1.7.0\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Shim, Version=2.1.0.0, Culture=neutral, PublicKeyToken=c55ec16d10c4b366, processorArchitecture=MSIL">
+      <HintPath>..\packages\shim.2.1.0-pre\lib\net40\Shim.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlastViewer\BlastViewer.Designer.vb">
+      <DependentUpon>BlastViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlastViewer\BlastViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlastViewer\SelectFromList.Designer.vb">
+      <DependentUpon>SelectFromList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlastViewer\SelectFromList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class1.vb" />
+    <Compile Include="FileManager.Designer.vb">
+      <DependentUpon>FileManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adaptor_Scores.Designer.vb">
+      <DependentUpon>Adaptor_Scores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Adaptor_Scores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="g.designer.vb">
+      <DependentUpon>g.vb</DependentUpon>
+    </Compile>
+    <Compile Include="g.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\CheckBoxForStringsFull.designer.vb">
+      <DependentUpon>CheckBoxForStringsFull.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\CheckBoxForStringsFull.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\FolderSelectDialog.vb" />
+    <Compile Include="Input\Get_List_of_String.Designer.vb">
+      <DependentUpon>Get_List_of_String.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\Get_List_of_String.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\Input.vb" />
+    <Compile Include="Input\Select_Columns.designer.vb">
+      <DependentUpon>Select_Columns.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\Select_Columns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\TableManipulation.Designer.vb">
+      <DependentUpon>TableManipulation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\TableManipulation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\SelectFirstRowAndColumn%28s%29.Designer.vb">
+      <DependentUpon>SelectFirstRowAndColumn%28s%29.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\SelectFirstRowAndColumn%28s%29.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\SettingOfTranscriptPromoterUTR.Designer.vb">
+      <DependentUpon>SettingOfTranscriptPromoterUTR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\SettingOfTranscriptPromoterUTR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\TRYIII.designer.vb">
+      <DependentUpon>TRYIII.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input\TRYIII.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LongTranscripts.Designer.vb">
+      <DependentUpon>LongTranscripts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LongTranscripts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinIonManager.Designer.vb">
+      <DependentUpon>MinIonManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinIonManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="BlastViewer\SeqGroup.vb" />
+    <Compile Include="Text.vb" />
+    <Compile Include="VennTable.Designer.vb">
+      <DependentUpon>VennTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VennTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Adaptor_Scores.resx">
+      <DependentUpon>Adaptor_Scores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlastViewer\BlastViewer.resx">
+      <DependentUpon>BlastViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlastViewer\SelectFromList.resx">
+      <DependentUpon>SelectFromList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManager.resx">
+      <DependentUpon>FileManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="g.resx">
+      <DependentUpon>g.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\CheckBoxForStringsFull.resx">
+      <DependentUpon>CheckBoxForStringsFull.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\Get_List_of_String.resx">
+      <DependentUpon>Get_List_of_String.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\Select_Columns.resx">
+      <DependentUpon>Select_Columns.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\TableManipulation.resx">
+      <DependentUpon>TableManipulation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\SelectFirstRowAndColumn%28s%29.resx">
+      <DependentUpon>SelectFirstRowAndColumn%28s%29.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\SettingOfTranscriptPromoterUTR.resx">
+      <DependentUpon>SettingOfTranscriptPromoterUTR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\TRYIII.resx">
+      <DependentUpon>TRYIII.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LongTranscripts.resx">
+      <DependentUpon>LongTranscripts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinIonManager.resx">
+      <DependentUpon>MinIonManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VennTable.resx">
+      <DependentUpon>VennTable.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Basic.vbproj">
+      <Project>{63201f15-4526-4169-8098-70cba588bf4e}</Project>
+      <Name>Basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Bio.Core\Bio.Core.csproj">
+      <Project>{dfb9c4e2-c98c-4401-a650-756abab52663}</Project>
+      <Name>Bio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Bio.Desktop\Bio.Desktop.csproj">
+      <Project>{a482be8f-67d5-4991-84bd-da3bf6ed84fa}</Project>
+      <Name>Bio.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Bio.WebServices\Bio.WebServices.csproj">
+      <Project>{3b79b074-0df5-4fb5-89b7-6a8f4271a1a7}</Project>
+      <Name>Bio.WebServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Framework\Shims\Bio.Platform.Helpers.Desktop\Bio.Platform.Helpers.Desktop.csproj">
+      <Project>{2a6bb04d-047f-4f04-9afb-9bf8941a292a}</Project>
+      <Name>Bio.Platform.Helpers.Desktop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,KB2468871">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29 and Update for .NET Framework 4 %28KB2468871%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Bio.Core.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bio.Core.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bio.Desktop.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bio.Desktop.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bio.Platform.Helpers.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bio.Platform.Helpers.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bio.WebServices.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bio.WebServices.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="x64\" />
+    <Folder Include="x86\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Accord.3.5.4-alpha\build\Accord.targets" Condition="Exists('..\packages\Accord.3.5.4-alpha\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.5.4-alpha\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.5.4-alpha\build\Accord.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
